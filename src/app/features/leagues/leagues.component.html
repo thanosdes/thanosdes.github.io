@@ -9,7 +9,7 @@
       <tbody>
         <tr *ngFor="let item of items">
           <td>{{ item.rank }}</td>
-          <td><img class="logo" [src]="item.logo" /></td>
+          <td><img class="logo" [src]="item.logo" alt="Team Logo"/></td>
           <td>
             <a [routerLink]="['/teams', item.id]">{{ item.name }}</a>
           </td>

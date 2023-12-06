@@ -2,7 +2,7 @@
   <ul>
     <li class="game-result" *ngFor="let result of results">
       <div class="game-result-home">
-        <div><img class="logo" [src]="result.home.logo" /></div>
+        <div><img class="logo" [src]="result.home.logo" alt="Home Team Logo"/></div>
         <div>{{ result.home.name }}</div>
         <div>{{ result.home.score }}</div>
       </div>
@@ -10,7 +10,7 @@
       <div class="game-result-away">
         <div>{{ result.away.score }}</div>
         <div>{{ result.away.name }}</div>
-        <div><img class="logo" [src]="result.away.logo" /></div>
+        <div><img class="logo" [src]="result.away.logo" alt="Away Team Logo"/></div>
       </div>
     </li>
   </ul>
