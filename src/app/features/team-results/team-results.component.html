@@ -6,7 +6,7 @@
         <div>{{ result.home.name }}</div>
         <div>{{ result.home.score }}</div>
       </div>
-      <div>-</div>
+      <div *ngIf="result.home.score !== null && result.away.score !== null; else inProgress">-</div>
       <div class="game-result-away">
         <div>{{ result.away.score }}</div>
         <div>{{ result.away.name }}</div>
@@ -17,4 +17,5 @@
   <br />
   <button (click)="navigateBack()">Back</button>
 </ng-container>
+<ng-template #inProgress><div>LIVE</div></ng-template>
 <ng-template #loading>Loading game results...</ng-template>
