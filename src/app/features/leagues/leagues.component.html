@@ -1,0 +1,27 @@
+<ng-container *ngIf="items; else loading">
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th *ngFor="let column of tableColumns">{{ column }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items">
+          <td>{{ item.rank }}</td>
+          <td><img class="logo" [src]="item.logo" /></td>
+          <td>
+            <a [routerLink]="['/teams', item.id]">{{ item.name }}</a>
+          </td>
+          <td>{{ item.played }}</td>
+          <td>{{ item.win }}</td>
+          <td>{{ item.draw }}</td>
+          <td>{{ item.lose }}</td>
+          <td>{{ item.goalsDiff }}</td>
+          <td>{{ item.points }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>
+<ng-template #loading>Loading standings...</ng-template>

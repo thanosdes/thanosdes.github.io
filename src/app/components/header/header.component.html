@@ -1,0 +1,15 @@
+<header>
+  <h3>{{ title | uppercase }}</h3>
+  <nav>
+    <ul>
+      <li *ngFor="let country of countries">
+        <a
+          id="{{ country.attr }}Select"
+          [routerLink]="['/leagues', country.id]"
+          routerLinkActive="active"
+          >{{ country.name }}</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>

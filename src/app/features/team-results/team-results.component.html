@@ -1,0 +1,20 @@
+<ng-container *ngIf="results; else loading">
+  <ul>
+    <li class="game-result" *ngFor="let result of results">
+      <div class="game-result-home">
+        <div><img class="logo" [src]="result.home.logo" /></div>
+        <div>{{ result.home.name }}</div>
+        <div>{{ result.home.score }}</div>
+      </div>
+      <div>-</div>
+      <div class="game-result-away">
+        <div>{{ result.away.score }}</div>
+        <div>{{ result.away.name }}</div>
+        <div><img class="logo" [src]="result.away.logo" /></div>
+      </div>
+    </li>
+  </ul>
+  <br />
+  <button (click)="navigateBack()">Back</button>
+</ng-container>
+<ng-template #loading>Loading game results...</ng-template>

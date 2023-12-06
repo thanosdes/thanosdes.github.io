@@ -1,0 +1,45 @@
+.game-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .game-result-home,
+  .game-result-away {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    div {
+      &:nth-of-type(2) {
+        text-align: center;
+      }
+    }
+  }
+  .game-result-home {
+    div {
+      &:last-of-type {
+        margin-right: 2rem;
+      }
+    }
+  }
+  .game-result-away {
+    div {
+      &:first-of-type {
+        margin-left: 2rem;
+      }
+    }
+  }
+
+}
+
+button {
+  color: black;
+  background-color: rgba(230, 230, 223, 0.856);
+  border: 0;
+  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+  &:hover {
+    color: white;
+    background-color: rgba(128, 128, 125, 0.856);
+    cursor: pointer;
+  }
+}
